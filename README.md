@@ -1,5 +1,5 @@
 # astar-cube
-The A* algorithm running on a cube (3D space). Wirrten for learning purposes.
+The A* algorithm running on a cube (3D space). Written for learning purposes.
 
 ### Running
 ```
