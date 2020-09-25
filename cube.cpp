@@ -84,17 +84,17 @@ Location Cube::getGoal() { return this->goal; }
  * Up, Down
  */
 array<Location, 6> Cube::DIRS =
-  {Location{1, 0, 0}, Location{-1, 0, 0},
-   Location{0, 1, 0}, Location{0, -1, 0},
-   Location{0, 0, 1}, Location{0, 0, -1}};
+    { Location{1, 0, 0}, Location{-1, 0, 0},
+      Location{0, 1, 0}, Location{0, -1, 0},
+      Location{0, 0, 1}, Location{0, 0, -1} };
 
 vector<Location> Cube::getNeighbors(Location loc) const {
     vector<Location> neighbors;
 
     for (Location dir : this->DIRS) {
         Location next = Location(loc.getX() + dir.getX(),
-                                     loc.getY() + dir.getY(),
-                                     loc.getZ() + dir.getZ());
+                                 loc.getY() + dir.getY(),
+                                 loc.getZ() + dir.getZ());
         if (this->isValid(next)) {
             Location actual_loc = this->getLoc(next);
             if (this->isPassable(actual_loc)) neighbors.push_back(next);

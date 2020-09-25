@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
     bool record = false;
 
     if (argc == 1) {
-        cout << "No arguments inserted (see README.txt). Default settings used." << endl;
+        cout << "No arguments inserted (see README). Default settings used." << endl;
     } else {
         for (int i = 1; i < argc; i++) {
             if (strcmp(argv[i],"-r")==0) {
